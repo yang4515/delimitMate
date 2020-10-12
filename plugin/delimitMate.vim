@@ -74,15 +74,15 @@ function! Cr()
   return "\<cr>"
 endf
 
-inoremap ( <c-r>=AutoPair('(', ')')<cr>
-inoremap ) <c-r>=ClosePair(')')<cr>
-inoremap { <c-r>=AutoPair('{', '}')<cr>
-inoremap } <c-r>=ClosePair('}')<cr>
-inoremap [ <c-r>=AutoPair('[', ']')<cr>
-inoremap ] <c-r>=ClosePair(']')<cr>
-inoremap " <c-r>=SamePair('"')<cr>
-inoremap ' <c-r>=SamePair("'")<cr>
-inoremap ` <c-r>=SamePair('`')<cr>
-inoremap <bs> <c-r>=Bs()<cr>
-inoremap <cr> <c-r>=Cr()<cr>
-inoremap <space> <c-r>=Space()<cr>
+inoremap <silent> ( <c-r>=AutoPair('(', ')')<cr>
+inoremap <silent> ) <c-r>=ClosePair(')')<cr>
+inoremap <silent> { <c-r>=AutoPair('{', '}')<cr>
+inoremap <silent> } <c-r>=ClosePair('}')<cr>
+inoremap <silent> [ <c-r>=AutoPair('[', ']')<cr>
+inoremap <silent> ] <c-r>=ClosePair(']')<cr>
+inoremap <silent> " <c-r>=SamePair('"')<cr>
+inoremap <silent> ' <c-r>=SamePair("'")<cr>
+inoremap <silent> ` <c-r>=SamePair('`')<cr>
+inoremap <silent> <bs> <c-r>=Bs()<cr>
+inoremap <silent> <cr> <c-r>=Cr()<cr>
+inoremap <silent> <space> <c-r>=Space()<cr>
