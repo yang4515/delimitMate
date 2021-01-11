@@ -1,7 +1,7 @@
 function! AutoPair(open, close)
   let line = getline('.')
   let cc = col('.') - 1
-  if cc >= strlen(line) || line[cc] == ' '
+  if cc >= strlen(line) - 1 || line[cc] == ' '
     return a:open.a:close."\<ESC>i"
   endif
   return a:open
