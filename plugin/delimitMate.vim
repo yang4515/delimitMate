@@ -19,11 +19,15 @@ endf
 function! SamePair(char)
   let line = getline('.')
   let cc = col('.') - 1
-  if cc >= strlen(line) || line[cc] == ' '
+  let current_char = line[cc]
+  let pre_char = line[cc - 1]
+
+  if strlen(line) == 0 || pre_char == ' ' || pre_char == '(' || pre_char == '['
     return a:char.a:char."\<ESC>i"
-  endif
-  if line[cc] == a:char
-    return "\<Right>"
+  else
+    if current_char == a:char
+      return "\<Right>"
+    endif
   endif
   return a:char
 endf
